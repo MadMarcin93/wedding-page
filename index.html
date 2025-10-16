@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href=""
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="30px"
+              viewBox="0 -960 960 960"
+              width="30px"
+              fill="#FFFFFF"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              /></svg
+          ></a>
+        </li>
+        <li><a href="#">Home</a></li>
+        <li><a href="formulario.html">Confirm</a></li>
+        <li><a href="Hotele.html">Hoteles</a></li>
+      </ul>
+      <ul>
+        <li class="hideOnMobile"><a href="#">Home</a></li>
+        <li class="hideOnMobile"><a href="">Confirm</a></li>
+        <li class="hideOnMobile"><a href="">Contact</a></li>
+        <li onclick="showSidebar()">
+          <svg
+            id="menu"
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -860 860 760"
+            width="24px"
+            fill="#000000"
+          >
+            <path
+              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+            />
+          </svg>
+        </li>
+      </ul>
+    </nav>
+    <header id="main-header">
+      <h1>MAR & MARCIN</h1>
+    </header>
+    <main>
+      <section id="first-section">
+        <p>¡Nos Casamos!</p>
+        <p>
+          <em><u>5 de Septiembre 2026</u></em>
+        </p>
+        <p>Granada</p>
+
+        <div id="googleMap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3178.8106368429635!2d-3.588856823449179!3d37.18097094614213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fd5863f809e5%3A0x3d6beb21648f3672!2sEl%20Camborio!5e0!3m2!1spl!2ses!4v1760533030499!5m2!1spl!2ses"
+            width="250"
+            height="150"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+      <section id="second-section">
+        <h2>¡Bienvenidos a nuestra boda!</h2>
+        <p>
+          ¡Que sí! Que nos casamos!!! ¡Estamos super felices! Nos sentimos en
+          las nubes y queremos compartir contigo todo nuestro amor. Por eso
+          estamos preparando una boda que hará historia y en la que te lo
+          pasarás genial. Mientras llega el gran día hemos creado esta web con
+          un montón de secciones para que estés al día de todo y para compartir
+          nuestra historia de amor. Una cosa importante, en la sección
+          asistencia puedes confirmar si vas a la boda o no. Confírmanos lo
+          antes posible por favor, que así organizarlo todo nos será mucho más
+          fácil. Disfruta la web y nos vemos muy pronto, mil besos!
+        </p>
+      </section>
+    </main>
+    <footer id="main-footer">
+      <p>&copy; 2025 Mar&Marcin. All rights reserved.</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
