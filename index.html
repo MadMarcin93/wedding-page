@@ -78,34 +78,47 @@
         <div class="album-container">
           <div class="album">
             <div class="card"><img src="fotos/foto1.jpg" alt="foto1" /></div>
+            <div class="card"><img src="fotos/foto4.jpg" alt="foto2" /></div>
             <div class="card"><img src="fotos/foto2.jpg" alt="foto2" /></div>
+            <div class="card"><img src="fotos/foto4.jpg" alt="foto2" /></div>
             <div class="card"><img src="fotos/foto3.jpg" alt="foto3" /></div>
           </div>
           <div aria-hidden="" class="album">
             <div class="card"><img src="fotos/foto1.jpg" alt="foto1" /></div>
+            <div class="card"><img src="fotos/foto4.jpg" alt="foto2" /></div>
             <div class="card"><img src="fotos/foto2.jpg" alt="foto2" /></div>
-            <div class="card"><img src="fotos/foto3.jpg" alt="foto3" /></div>
-          </div>
-          <div aria-hidden="" class="album">
-            <div class="card"><img src="fotos/foto1.jpg" alt="foto1" /></div>
-            <div class="card"><img src="fotos/foto2.jpg" alt="foto2" /></div>
+            <div class="card"><img src="fotos/foto4.jpg" alt="foto2" /></div>
             <div class="card"><img src="fotos/foto3.jpg" alt="foto3" /></div>
           </div>
         </div>
       </section>
       <section>
         <div class="footer-container">
-          <img src="" alt="foto4" />
-          <h3>Your present is the best gift</h3>
-          <p>if for some reason you cant celebrate wieh us</p>
-          <form action="" id="form">
-            <label for="">Name</label>
-            <input type="text" name="" id="" />
-            <label for="">yes</label>
-            <input type="checkbox" name="" id="" />
-            <label for="">no</label>
-            <input type="checkbox" name="" id="" />
+          <h3>Be our guest!</h3>
+          <p id="form-date">Pleace replay by 05/06/2026</p>
+          <form id="form" action="#">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <select id="attendance" name="attendance" required>
+              <option value="" disabled selected>Will you attend?</option>
+              <option value="yes">Yes, I will be there!</option>
+              <option value="no">No, I can't make it.</option>
+            </select>
+            <button type="submit" id="submit">Submit</button>
           </form>
+          <img src="fotos/foto4.jpg" alt="foto4" />
         </div>
       </section>
     </main>
