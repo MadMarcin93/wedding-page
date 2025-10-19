@@ -5,19 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mar&MarcinWedding</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Quattrocento:wght@400;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
-      <secction class="header"
-        ><h1>Mar & Marcin</h1>
+      <section class="header">
+        <h1>Mar & Marcin</h1>
         <h2>Are getting married</h2>
-        <button><a href="">RSVP Here</a></button>
+        <div class="button-container">
+          <button><a href="#form" id="button">RSVP Here</a></button>
+        </div>
         <div>
           <p>Sep. 05 2026 19:00</p>
           <p>El camborio, Granada</p>
         </div>
-      </secction>
-      <secction class="program">
+      </section>
+      <section class="program">
         <h2>Program</h2>
         <div class="program-container">
           <div class="time-list">
@@ -65,20 +73,32 @@
           voluptatem exercitationem modi assumenda nobis ratione. Itaque quas
           fuga tempore harum consequatur?
         </p>
-      </secction>
-      <secction class="album">
+      </section>
+      <section class="album1">
         <div class="album-container">
-          <div><img src="" alt="foto1" /></div>
-          <div><img src="" alt="foto2" /></div>
-          <div><img src="" alt="foto3" /></div>
+          <div class="album">
+            <div class="card"><img src="fotos/foto1.jpg" alt="foto1" /></div>
+            <div class="card"><img src="fotos/foto2.jpg" alt="foto2" /></div>
+            <div class="card"><img src="fotos/foto3.jpg" alt="foto3" /></div>
+          </div>
+          <div aria-hidden="" class="album">
+            <div class="card"><img src="fotos/foto1.jpg" alt="foto1" /></div>
+            <div class="card"><img src="fotos/foto2.jpg" alt="foto2" /></div>
+            <div class="card"><img src="fotos/foto3.jpg" alt="foto3" /></div>
+          </div>
+          <div aria-hidden="" class="album">
+            <div class="card"><img src="fotos/foto1.jpg" alt="foto1" /></div>
+            <div class="card"><img src="fotos/foto2.jpg" alt="foto2" /></div>
+            <div class="card"><img src="fotos/foto3.jpg" alt="foto3" /></div>
+          </div>
         </div>
-      </secction>
-      <secction>
+      </section>
+      <section>
         <div class="footer-container">
           <img src="" alt="foto4" />
           <h3>Your present is the best gift</h3>
           <p>if for some reason you cant celebrate wieh us</p>
-          <form action="">
+          <form action="" id="form">
             <label for="">Name</label>
             <input type="text" name="" id="" />
             <label for="">yes</label>
@@ -87,7 +107,7 @@
             <input type="checkbox" name="" id="" />
           </form>
         </div>
-      </secction>
+      </section>
     </main>
   </body>
 </html>
