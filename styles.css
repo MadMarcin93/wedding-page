@@ -9,7 +9,7 @@ body {
   --font-quattrocento: "Quattrocento", serif;
   /*colors*/
   --text-color-light: #faf1e1;
-  --bg-color: #cdc1ab;
+  --bg-color: #a59a86;
 }
 .header {
   text-align: center;
@@ -126,4 +126,27 @@ img {
   to {
     translate: -100%;
   }
+}
+.footer-container {
+  text-align: center;
+  margin: 2em 0;
+}
+.footer-container h3 {
+  font-family: var(--font-pinyon);
+  font-size: 3rem;
+}
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+#submit {
+  font-family: var(--font-roboto-mono);
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  color: var(--text-color-light);
+  margin: 1em;
 }
