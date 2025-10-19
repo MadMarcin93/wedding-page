@@ -1,3 +1,129 @@
 body {
-  background-color: rgb(161, 160, 149);
+  background-color: var(--bg-color);
+}
+
+:root {
+  /*fonts*/
+  --font-pinyon: "Pinyon Script", cursive;
+  --font-roboto-mono: "Roboto Mono", monospace;
+  --font-quattrocento: "Quattrocento", serif;
+  /*colors*/
+  --text-color-light: #faf1e1;
+  --bg-color: #cdc1ab;
+}
+.header {
+  text-align: center;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: var(--text-color-light);
+  height: 100vh;
+}
+.header h2 {
+  margin-top: -4rem;
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+h1 {
+  font-family: var(--font-pinyon);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.4rem;
+  padding: 2rem;
+}
+.header,
+p {
+  font-family: var(--font-roboto-mono);
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.program-container {
+  font-family: var(--font-roboto-mono);
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.progrma,
+h2 {
+  font-family: var(--font-quattrocento);
+  font-weight: 600;
+  font-style: normal;
+}
+.button-container {
+  text-align: center;
+  margin-top: 1em;
+}
+#button {
+  font-family: var(--font-roboto-mono);
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  color: var(--text-color-light);
+}
+button {
+  background-color: transparent;
+  border: 1px solid var(--text-color-light);
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+h3 {
+  font-family: var(--font-roboto-mono);
+  font-weight: 400;
+  font-style: normal;
+}
+.program {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.program-container {
+  display: flex;
+}
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.1rem;
+}
+.album {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 1em;
+  gap: 1rem;
+  animation: spin 9s linear infinite;
+}
+.album-container {
+  display: flex;
+  width: 90%;
+  margin: 100px auto;
+  overflow-x: auto;
+}
+.album-container::-webkit-scrollbar {
+  display: none;
+}
+.card {
+  flex: 0 0 5em;
+  width: 200px;
+  text-align: center;
+}
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
+  object-fit: cover;
+}
+@keyframes spin {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
 }
