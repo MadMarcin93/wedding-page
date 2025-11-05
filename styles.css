@@ -1,4 +1,4 @@
-body {
+* {
   background-color: var(--bg-color);
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@ body {
   --font-roboto-mono: "Roboto Mono", monospace;
   --font-quattrocento: "Quattrocento", serif;
   /*colors*/
-  --text-color-light: #faf1e1;
+  --text-color-light: #e3d9c8;
   --bg-color: #a59a86;
 }
 .header {
@@ -28,49 +28,49 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 8%;
+  border-radius: 15px;
 }
-.header h2 {
-  margin-top: -4rem;
-  font-size: 1.3rem;
-  font-weight: 100;
+.header-text {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  margin-top: 18rem;
+  color: var(--text-color-light);
 }
-h1 {
+.header-text h1 {
   font-family: var(--font-pinyon);
-  font-weight: 400;
-  font-style: normal;
-  font-size: 2.4rem;
-  padding: 2rem;
+  font-size: 2.5rem;
+  margin: 0;
 }
-.header,
-p {
+.header-text h2 {
   font-family: var(--font-roboto-mono);
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 .program {
   background-image: url(https://cdn0.bodas.net/website/fotos/templates/284_home.png?v=d82f2d33a9958f6d39a3cba34e1a81a1);
-  background-size: cover;
+  background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 8%;
   padding: 1em;
-  height: 60vh;
-  margin-top: -2.5em;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color-light);
 }
-.progrma,
-p {
-  color: white;
-  text-align: center;
-}
+
 .button-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 7em;
+  font-size: 1.5em;
+  gap: 1em;
 }
 
 #button {
@@ -78,7 +78,7 @@ p {
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
-  padding: 0.5em 1em;
+  padding: 1em;
   color: var(--text-color-light);
 }
 button {
@@ -87,72 +87,69 @@ button {
   padding: 0.5em 1em;
   cursor: pointer;
 }
-h3 {
+
+.info h3 {
   font-family: var(--font-roboto-mono);
-  font-weight: 400;
-  font-style: normal;
+  font-size: 1.2rem;
   color: var(--text-color-light);
+  width: 60%;
+  margin: 0 auto 2em auto;
   text-align: center;
 }
-.program {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 5em;
+.info p {
+  font-family: var(--font-quattrocento);
+  font-size: 1.2rem;
+  color: var(--text-color-light);
+  width: 80vw;
+  margin: 0 auto 1em auto;
+  text-align: center;
 }
+
 .program-container {
   display: flex;
 }
-#content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1.1rem;
-}
-.album {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-right: 1em;
-  gap: 1rem;
-  animation: spin 9s linear infinite;
-}
-.album-container {
-  display: flex;
-  width: 90%;
+
+.carousel {
   margin: 100px auto;
-  overflow-x: auto;
+  width: 100%;
+  height: 15em;
+  display: flex;
+  overflow: hidden;
 }
-.album-container::-webkit-scrollbar {
+.carousel::-webkit-scrollbar {
   display: none;
 }
-.card {
-  flex: 0 0 5em;
-  width: 200px;
-  text-align: center;
-}
-.map {
+.group {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 5em;
+  gap: 1rem;
+  animation: spin 14s linear infinite;
+  padding-right: 1em;
 }
-
+.card {
+  flex: 0 0 2em;
+  height: 6em;
+  padding: 1em;
+  border-radius: 3px;
+  text-align: center;
+  align-content: center;
+}
+@keyframes spin {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 img {
   width: 150px;
   height: 150px;
   border-radius: 10%;
   object-fit: cover;
 }
-@keyframes spin {
-  from {
-    translate: 0;
-  }
-  to {
-    translate: -100%;
-  }
-}
+
 .footer-container {
   text-align: center;
   margin: 2em 0;
@@ -191,11 +188,39 @@ img {
   border-radius: 8%;
   margin-top: 2em;
 }
-iframe {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
+
+@media (min-width: 1024px) {
+  .header-text {
+    margin-top: 10%;
+  }
+  .header-text h1 {
+    font-size: 4rem;
+  }
+  .header-text h2 {
+    font-size: 2rem;
+  }
+  .header {
+    background-image: none;
+  }
+  .program {
+    font-size: 2rem;
+  }
+  .button-container {
+    font-size: 1em;
+  }
+  .carousel {
+    margin: 100px auto;
+    width: 45em;
+
+    display: flex;
+    overflow: hidden;
+  }
+  .group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    animation: spin 14s linear infinite;
+    padding-right: 5em;
+  }
 }
