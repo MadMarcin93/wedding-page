@@ -62,6 +62,7 @@
   align-items: center;
   justify-content: center;
   color: var(--text-color-light);
+  font-size: 1em;
 }
 
 .button-container {
@@ -90,7 +91,7 @@ button {
 
 .info h3 {
   font-family: var(--font-roboto-mono);
-  font-size: 1.2rem;
+  font-size: 1.3em;
   color: var(--text-color-light);
   width: 60%;
   margin: 0 auto 2em auto;
@@ -103,15 +104,18 @@ button {
   width: 80vw;
   margin: 0 auto 1em auto;
   text-align: center;
+  letter-spacing: 1px;
 }
 
 .program-container {
   display: flex;
 }
-
+.album {
+  width: 50vw;
+}
 .carousel {
   margin: 100px auto;
-  width: 100%;
+  width: 100vw;
   height: 15em;
   display: flex;
   overflow: hidden;
@@ -148,6 +152,16 @@ img {
   height: 150px;
   border-radius: 10%;
   object-fit: cover;
+  padding: 0.5em;
+}
+.mapa {
+  width: 80vw;
+  height: auto;
+  border-radius: 15px;
+  margin: 2em auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-container {
@@ -182,13 +196,6 @@ img {
   height: 250px;
 }
 
-#mapa {
-  width: 100vw;
-  height: auto;
-  border-radius: 8%;
-  margin-top: 2em;
-}
-
 @media (min-width: 1024px) {
   .header-text {
     margin-top: 10%;
@@ -203,15 +210,18 @@ img {
     background-image: none;
   }
   .program {
-    font-size: 2rem;
+    font-size: 2em;
   }
   .button-container {
     font-size: 1em;
   }
+  .info h3 {
+    font-size: 2.3em;
+    width: 40%;
+  }
   .carousel {
     margin: 100px auto;
-    width: 45em;
-
+    width: 100vw;
     display: flex;
     overflow: hidden;
   }
@@ -222,5 +232,9 @@ img {
     gap: 5rem;
     animation: spin 14s linear infinite;
     padding-right: 5em;
+  }
+  iframe {
+    width: 500px;
+    height: auto;
   }
 }
