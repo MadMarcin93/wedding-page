@@ -1,116 +1,155 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mar&MarcinWedding</title>
+    <title>Our Wedding</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Quattrocento:wght@400;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
-    <main>
-      <section class="header">
-        <div class="header-text">
-          <h1>Mar & Marcin</h1>
+    <!-- Header with Photo and Navigation -->
+    <header class="header">
+      <div class="header-photo">
+        <img
+          src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&h=400&fit=crop"
+          alt="Wedding Photo"
+          id="header-image"
+        />
+      </div>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#details">Details</a></li>
+          <li><a href="#venue">Venue</a></li>
+          <li><a href="#rsvp">RSVP</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section home-section">
+      <div class="container">
+        <h1 class="main-title">¡Nos Casamos!</h1>
+        <h2 class="names">Mar & Marcin</h2>
+        <p class="date">Saturday, Septemper 05, 2026</p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <h2 class="section-title">Nuestra Historia</h2>
+        <div class="story-content">
+          <p>
+            We met in the summer of 2013 and instantly knew we had found
+            something special. After years of adventures, laughter, and growing
+            together, we can't wait to celebrate our love with all of you.
+          </p>
+          <p>
+            Join us as we say "I do" and begin the next chapter of our lives
+            together.
+          </p>
         </div>
-      </section>
-      <section class="info">
-        <h3>¡Nos casamos y queremos celebrarlo contigo!</h3>
-        <p>
-          Después de 12 años juntos, hemos decidido dar el siguiente paso en
-          nuestra historia de amor. Será un honor compartir este día especial
-          con las personas que más queremos.
-        </p>
+      </div>
+    </section>
 
-        <p>
-          Por eso estamos preparando una boda que hará historia y en la que te
-          lo pasarás genial. Mientras llega el gran día hemos creado esta web
-          con un montón de secciones para que estés al día de todo y para
-          compartir nuestra historia de amor.
-        </p>
-        <p>
-          Una cosa importante, en la sección abajo puedes confirmar si vas a la
-          boda o no. Confírmanos lo antes posible por favor, que así organizarlo
-          todo nos será mucho más fácil. Disfruta la web y nos vemos muy pronto,
-          mil besos!
-        </p>
-      </section>
-
-      <section class="program">
-        <div class="button-container">
-          <h2>Time left:</h2>
-          <div class="countdown">
-            <div class="timer">
-              <p id="days">00</p>
-              <p id="hour">00</p>
-              <p id="minuts">00</p>
-              <p id="secound">00</p>
-            </div>
+    <!-- Details Section -->
+    <section id="details" class="section details-section">
+      <div class="container">
+        <h2 class="section-title">Wedding Details</h2>
+        <div class="details-grid">
+          <div class="detail-card">
+            <h3>Ceremony</h3>
+            <p><strong>Time:</strong> 4:00 PM</p>
+            <p><strong>Location:</strong> Garden Pavilion</p>
           </div>
+          <div class="detail-card">
+            <h3>Reception</h3>
+            <p><strong>Time:</strong> 5:30 PM</p>
+            <p><strong>Location:</strong> Grand Ballroom</p>
+          </div>
+          <div class="detail-card">
+            <h3>Dress Code</h3>
+            <p>Cocktail Attire</p>
+            <p>We'd love to see you dressed up!</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <p>El camborio, Granada</p>
-          <button>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdD0rHJvKo6muUCBumO1scphvL1jMxTOHGlXW3eiv6zqpeG6w/viewform?usp=header"
-              id="button"
-              >RSVP Here</a
+    <!-- Venue Section with Map -->
+    <section id="venue" class="section venue-section">
+      <div class="container">
+        <h2 class="section-title">Venue Location</h2>
+        <p class="venue-address">El Camborio, Granada</p>
+        <div class="map-container">
+          <div id="map"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="section rsvp-section">
+      <div class="container">
+        <h2 class="section-title">RSVP</h2>
+        <p class="rsvp-subtitle">Please let us know if you'll be joining us!</p>
+        <form id="rsvp-form" class="rsvp-form">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="guests">Number of Guests *</label>
+            <input
+              type="number"
+              id="guests"
+              name="guests"
+              min="1"
+              max="10"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="attending">Will you be attending? *</label>
+            <select id="attending" name="attending" required>
+              <option value="">Please select</option>
+              <option value="Yes">Yes, I'll be there!</option>
+              <option value="No">Sorry, I can't make it</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="dietary"
+              >Dietary Restrictions or Special Requests</label
             >
-          </button>
-        </div>
-      </section>
-      <section class="album">
-        <div class="carousel">
-          <div class="group">
-            <div class="card"><img src="fotos/foto1.jpg" alt="foto" /></div>
-            <div class="card"><img src="fotos/foto4.jpg" alt="foto" /></div>
-            <div class="card"><img src="fotos/foto1.jpg" alt="foto" /></div>
-            <div class="card"><img src="fotos/foto4.jpg" alt="foto" /></div>
-            <div class="card"><img src="fotos/foto1.jpg" alt="foto" /></div>
-            <div class="card"><img src="fotos/foto4.jpg" alt="foto" /></div>
+            <textarea id="dietary" name="dietary" rows="3"></textarea>
           </div>
-          <div aria-hidden="" class="group">
-            <div class="card"><img src="fotos/foto1.jpg" alt="foto" /></div>
-            <div class="card"><img src="fotos/foto4.jpg" alt="foto" /></div>
-            <div class="card"><img src="fotos/foto1.jpg" alt="foto" /></div>
-            <div class="card"><img src="fotos/foto4.jpg" alt="foto" /></div>
-            <div class="card"><img src="fotos/foto1.jpg" alt="foto" /></div>
-            <div class="card"><img src="fotos/foto4.jpg" alt="foto" /></div>
-          </div>
-        </div>
-      </section>
-      <!-- Google Maps embebido -->
-      <section class="mapa">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253.7771445770278!2d-3.5863622161001767!3d37.180963247683735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fd5863f809e5%3A0x3d6beb21648f3672!2sEl%20Camborio!5e1!3m2!1spl!2ses!4v1763117648572!5m2!1spl!2ses"
-          width="250"
-          height="170"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </section>
-      <footer class="footer-container">
-        <img src="fotos/foto4.jpg" alt="foto4" />
-        <hr color="white" />
-        <p>
-          2. Información Práctica Clima: Granada en septiembre: Temperatura:
-          20-30°C Recomendación: Chaqueta ligera para la noche Parking: Parking
-          gratuito en el venue Alternativa: Parking público a 5 min Taxi desde
-          centro: ~15€ Transporte: Desde aeropuerto: 45 min en coche Bus desde
-          estación: Línea X Coordinaremos transporte desde hoteles 3. Contacto
-          markdown## ¿Tienes preguntas? **Mar:** +34 XXX XXX XXX **Marcin:** +34
-          XXX XXX XXX Email: contacto@bodamarmarcin.es
-        </p>
-        <p>© Mar & Marcin 2026</p>
-      </footer>
-    </main>
+          <button type="submit" class="submit-btn">Submit RSVP</button>
+        </form>
+        <div id="form-message" class="form-message"></div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2026 Mar & Marcin Wedding. Made with ❤️</p>
+    </footer>
+
+    <!-- Google Maps API -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"
+      async
+      defer
+    ></script>
+    <script src="script.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+      async
+      defer
+    ></script>
   </body>
-  <script src="app.js"></script>
 </html>
