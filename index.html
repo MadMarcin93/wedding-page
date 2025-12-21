@@ -23,6 +23,7 @@
           <li><a href="#details">Boda</a></li>
           <li><a href="#Ceremonia">Info</a></li>
           <li><a href="#rsvp">Confirma tu asistencia</a></li>
+          <li><a href="#"> ES </a> / <a href="#">PL</a></li>
         </ul>
       </nav>
     </header>
@@ -32,9 +33,29 @@
       <div class="container">
         <h1 class="main-title">¡Nos Casamos!</h1>
         <h2 class="names">Mar & Marcin</h2>
-        <p class="date">Sábado 5 septiembre de 2026</p>
+        <p class="date">Sábado 5 de septiembre de 2026</p>
         <p>Granada</p>
-        <p>time down counter <span id="countdown"></span>00:00:00 dias</p>
+      </div>
+      <div class="countdown">
+        <div class="time-item">
+          <span id="days">00</span>
+          <span class="time-label">d</span>
+        </div>
+
+        <div class="time-item">
+          <span id="hours">00</span>
+          <span class="time-label">h</span>
+        </div>
+
+        <div class="time-item">
+          <span id="minutes">00</span>
+          <span class="time-label">min</span>
+        </div>
+
+        <div class="time-item">
+          <span id="seconds">00</span>
+          <span class="time-label">seg</span>
+        </div>
       </div>
     </section>
 
@@ -182,6 +203,12 @@
       <p>&copy; 2026 Mar & Marcin Wedding. Made with ❤️</p>
     </footer>
 
+    <!-- Google Maps API -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"
+      async
+      defer
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
