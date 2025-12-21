@@ -132,7 +132,15 @@ body {
   color: var(--text-color);
   font-weight: 300;
 }
-
+/* Countdown Timer */
+.countdown {
+  font-size: 1.2rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
 /* About Section */
 .about-section {
   background-color: var(--white);
@@ -212,11 +220,7 @@ body {
 
 .map-container {
   width: 100%;
-  height: 450px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  margin-top: 2rem;
+  height: 400px;
 }
 
 #map {
