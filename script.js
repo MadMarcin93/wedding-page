@@ -1,48 +1,3 @@
-// Google Maps Initialization
-function initMap() {
-  // Default location - Replace with your actual venue address
-  const venueLocation = {
-    lat: 37.18097,
-    lng: -3.58943,
-  }; // Example: New York City
-
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 15,
-    center: venueLocation,
-    styles: [
-      {
-        featureType: "all",
-        elementType: "geometry",
-        stylers: [{ color: "#f5f5f5" }],
-      },
-      {
-        featureType: "poi",
-        elementType: "labels",
-        stylers: [{ visibility: "off" }],
-      },
-    ],
-  });
-
-  const marker = new google.maps.Marker({
-    position: venueLocation,
-    map: map,
-    title: "Wedding Venue",
-  });
-
-  // Geocode the address if you have a specific address
-  // Uncomment and update the address below
-  /*
-    const geocoder = new google.maps.Geocoder();
-    const address = '123 Wedding Lane, Beautiful City, ST 12345';
-    geocoder.geocode({ address: address }, (results, status) => {
-        if (status === 'OK') {
-            map.setCenter(results[0].geometry.location);
-            marker.setPosition(results[0].geometry.location);
-        }
-    });
-    */
-}
-
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
@@ -131,3 +86,40 @@ function showMessage(message, type) {
 // Update header image - Replace with your own photo
 // You can update the src attribute in index.html or use JavaScript:
 // document.getElementById('header-image').src = 'path/to/your/photo.jpg';
+
+// Countdown Timer
+const daysEl = document.getElementById("days");
+const hoursEl = document.getElementById("hours");
+const minutesEl = document.getElementById("minutes");
+const secondsEl = document.getElementById("seconds");
+
+const eventDate = new Date("2026-09-05T19:00:00"); // data ślubu 🎉
+
+function updateCountdown() {
+  const now = new Date();
+  const timeDifference = eventDate - now;
+
+  if (timeDifference <= 0) {
+    daysEl.textContent = "00";
+    hoursEl.textContent = "00";
+    minutesEl.textContent = "00";
+    secondsEl.textContent = "00";
+    clearInterval(countdownInterval);
+    return;
+  }
+
+  const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+  daysEl.textContent = String(days).padStart(2, "0");
+  hoursEl.textContent = String(hours).padStart(2, "0");
+  minutesEl.textContent = String(minutes).padStart(2, "0");
+  secondsEl.textContent = String(seconds).padStart(2, "0");
+}
+
+const countdownInterval = setInterval(updateCountdown, 1000);
+updateCountdown(); // start od razu ⏱️
