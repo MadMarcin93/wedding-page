@@ -158,11 +158,7 @@
               class="taxi-link"
               href="https://play.google.com/store/apps/details?id=es.sooft.pidetaxi&hl=es"
               >Taxi App
-              <img
-                target="_blank"
-                class="icon"
-                src="android.png"
-                alt="android"
+              <img target="_blank" class="icon" src="android.png" alt="android"
             /></a>
           </p>
         </div>
@@ -207,42 +203,11 @@
       <div class="container">
         <h2 class="section-title">RSVP</h2>
         <p class="rsvp-subtitle">¡Confirma tu asistencia!</p>
-        <form id="rsvp-form" class="rsvp-form">
-          <div class="form-group">
-            <label for="name">Nombre *</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="form-group">
-            <label for="guests">Number of Guests *</label>
-            <input
-              type="number"
-              id="guests"
-              name="guests"
-              min="1"
-              max="10"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="attending">Will you be attending? *</label>
-            <select id="attending" name="attending" required>
-              <option value="">Please select</option>
-              <option value="Yes">Yes, I'll be there!</option>
-              <option value="No">Sorry, I can't make it</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="dietary"
-              >Dietary Restrictions or Special Requests</label
-            >
-            <textarea id="dietary" name="dietary" rows="3"></textarea>
-          </div>
-          <button type="submit" class="submit-btn">Submit RSVP</button>
-        </form>
+        <embed
+          class="form"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdD0rHJvKo6muUCBumO1scphvL1jMxTOHGlXW3eiv6zqpeG6w/viewform"
+          type="text/html"
+        />
         <div id="form-message" class="form-message"></div>
       </div>
     </section>
