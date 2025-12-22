@@ -265,7 +265,22 @@ body {
   margin-bottom: 0.5rem;
   color: #666;
 }
+.taxi-link {
+  font-weight: bold;
+  color: var(--secondary-color);
+  text-decoration: none;
+  display: inline-flex;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 5px;
+  background-color: var(--primary-color);
 
+  border-radius: 50%;
+  padding: 2px;
+}
 /* Venue Section */
 .venue-section {
   background-color: var(--white);
@@ -288,6 +303,16 @@ body {
   height: 100%;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+li > a {
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  color: var(--primary-color);
+}
 /* RSVP Section */
 .rsvp-section {
   background-color: var(--light-bg);
