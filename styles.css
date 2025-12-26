@@ -104,6 +104,9 @@ body {
   margin: 0 auto;
   padding: 0 2rem;
 }
+.container > h2 {
+  font-size: 4.5rem;
+}
 
 /* Home Section */
 .home-section {
@@ -137,12 +140,57 @@ body {
 }
 /* Countdown Timer */
 .countdown {
-  font-size: 1.2rem;
+  gap: 30px;
+  font-size: 2.5rem;
+  font-family: "Courier New", Courier, monospace;
   display: flex;
-  gap: 1.5rem;
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+}
+
+.time-box {
+  text-align: center;
+}
+
+.flip-card {
+  position: relative;
+  width: 120px;
+  height: 100px;
+  background: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.flip-card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #ccc;
+  z-index: 2;
+}
+
+.number {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+  font-weight: bold;
+  color: #111;
+}
+
+.label {
+  margin-top: 12px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #111;
 }
 
 /* infinity album section */
