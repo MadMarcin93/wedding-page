@@ -214,7 +214,7 @@ body {
   padding-right: 1em;
   align-items: center;
   justify-content: center;
-  animation: spin 8s linear infinite;
+  animation: spin 20s linear infinite;
 }
 
 .card {
@@ -222,7 +222,6 @@ body {
   min-width: 300px;
   height: 5em;
   padding: 1em;
-  background-color: var(--light-bg);
   border-radius: 2rem;
   box-shadow: var(--shadow);
   display: flex;
@@ -231,13 +230,11 @@ body {
   font-size: 3rem;
   color: var(--primary-color);
   scroll-snap-align: start;
-  text-align: center;
-  align-content: ce;
 }
 .card > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  object-fit: fill;
   border-radius: 1.5rem;
 }
 @keyframes spin {
@@ -314,10 +311,15 @@ body {
   color: #666;
 }
 .taxi-link {
-  font-weight: bold;
   color: var(--secondary-color);
   text-decoration: none;
   display: inline-flex;
+  align-items: center;
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+}
+.taxi-link:hover {
+  text-decoration: underline;
 }
 .icon {
   width: 20px;
@@ -325,7 +327,6 @@ body {
   vertical-align: middle;
   margin-left: 5px;
   background-color: var(--primary-color);
-
   border-radius: 50%;
   padding: 2px;
 }
@@ -361,19 +362,20 @@ li > a {
   text-decoration: none;
   color: var(--primary-color);
 }
+li
 /* RSVP Section */
 .rsvp-subtitle {
   background-color: var(--light-bg);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 0;
-  font-size: 1.2rem;
-  color: var(--text-color);
+  text-align: center;
   font-family: "Roboto Mono", monospace;
   font-weight: 400;
   font-size: 1.5rem;
+  color: var(--text-color);
 }
+
 .form {
   background-color: var(--white);
   max-width: 600px;
@@ -397,37 +399,141 @@ li > a {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .main-title {
-    font-size: 2.5rem;
+@media (max-width: 480px) {
+  /* GLOBAL */
+  body {
+    font-size: 14px;
   }
 
-  .names {
-    font-size: 2rem;
-  }
-
-  .date {
-    font-size: 1.2rem;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .nav-links {
-    gap: 1rem;
+  .container {
     padding: 0 1rem;
   }
 
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  /* HEADER */
+  .header-photo {
+    height: 250px;
+  }
+
+  /* NAVIGATION */
+  .navbar {
+    padding: 0.75rem 0;
+  }
+
+  .nav-links {
+    gap: 0.75rem;
+    padding: 0 1rem;
+    justify-content: space-between;
+  }
+
   .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  /* HOME */
+  .home-section {
+    padding: 4rem 0 3rem;
+  }
+
+  .main-title {
+    font-size: 3rem;
+    letter-spacing: 1px;
+  }
+
+  .names {
+    font-size: 1.6rem;
+  }
+
+  .date {
     font-size: 1rem;
   }
 
-  .rsvp-form {
-    padding: 2rem 1.5rem;
+  /* COUNTDOWN */
+  .countdown {
+    gap: 12px;
+    font-size: 0.5rem;
+    flex-wrap: wrap;
   }
 
-  .section {
-    padding: 3rem 0;
+  .flip-card {
+    width: 60px;
+    height: 50px;
+  }
+
+  .number {
+    font-size: 28px;
+  }
+
+  .label {
+    font-size: 10px;
+  }
+
+  /* ALBUM / CAROUSEL */
+  .carousel {
+    margin: 40px auto;
+    border-width: 3px;
+  }
+
+  .card {
+    min-width: 220px;
+    height: 160px;
+    font-size: 1.5rem;
+  }
+  .card > img {
+    width: 150px;
+    height: 150px;
+    object-fit: fill;
+    border-radius: 1.5rem;
+  }
+
+  /* SECTION TITLES */
+  .container > h2 {
+    font-size: 2.2rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  /* STORY */
+  .story-content {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* DETAILS GRID */
+  .details-grid {
+    gap: 1.5rem;
+  }
+
+  .detail-card {
+    padding: 1.5rem;
+  }
+
+  /* MAP */
+  .map-container {
+    height: 250px;
+  }
+
+  /* RSVP */
+  .rsvp-subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .form {
+    height: 1300px; /* VERY IMPORTANT */
+    padding: 1.5rem;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
   }
 }
