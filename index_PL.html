@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nasz Ślub</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Monsieur+La+Doulaise&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header with Photo and Navigation -->
+    <header id="home" class="header">
+      <div class="header-photo">
+        <img
+          src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&h=400&fit=crop"
+          alt="Zdjęcie ślubne"
+          id="header-image"
+        />
+      </div>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="#home">Start</a></li>
+          <li><a href="#about">Nasza historia</a></li>
+          <li><a href="#details">Ślub</a></li>
+          <li><a href="#Ceremonia">Informacje</a></li>
+          <li><a href="#rsvp">Potwierdź obecność</a></li>
+          <li><a href="index.html">ES</a> / <a href="index_PL.html">PL</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="section home-section">
+      <div class="container">
+        <h1 class="main-title">Mar & Marcin</h1>
+        <h2 class="names">Pobieramy się!</h2>
+        <p class="date">Sobota, 5 września 2026</p>
+      </div>
+      <div class="countdown">
+        <div class="time-box">
+          <div class="flip-card">
+            <div class="number" id="days">00</div>
+          </div>
+          <div class="label">DNI</div>
+        </div>
+
+        <div class="time-box">
+          <div class="flip-card">
+            <div class="number" id="hours">00</div>
+          </div>
+          <div class="label">GODZINY</div>
+        </div>
+
+        <div class="time-box">
+          <div class="flip-card">
+            <div class="number" id="minutes">00</div>
+          </div>
+          <div class="label">MINUTY</div>
+        </div>
+
+        <div class="time-box">
+          <div class="flip-card">
+            <div class="number" id="seconds">00</div>
+          </div>
+          <div class="label">SEKUNDY</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <h2 class="section-title">Nasza Historia</h2>
+        <div class="story-content">
+          <p>
+            Andaluzyjka, Polak i historia naszej miłości. <br />
+            W 2014 roku rozpoczęła się nasza podróż pełna lotów, wideorozmów i
+            tysięcy „tęsknię”. Dwanaście lat później szczęśliwe zakończenie
+            rozgrywa się z widokiem na Alhambrę. Pobieramy się! I chcemy, abyś
+            był/a częścią tego „tak”, które przekroczyło granice.
+          </p>
+        </div>
+      </div>
+      <div class="album_container">
+        <div class="carousel">
+          <div class="group">
+            <div class="card"><img src="1.jpg" alt="" /></div>
+            <div class="card"><img src="2.jpg" alt="" /></div>
+            <div class="card"><img src="3.jpg" alt="" /></div>
+            <div class="card"><img src="4.jpg" alt="" /></div>
+            <div class="card"><img src="5.jpg" alt="" /></div>
+            <div class="card"><img src="6.jpg" alt="" /></div>
+          </div>
+          <div aria-hidden class="group">
+            <div class="card"><img src="1.jpg" alt="" /></div>
+            <div class="card"><img src="2.jpg" alt="" /></div>
+            <div class="card"><img src="3.jpg" alt="" /></div>
+            <div class="card"><img src="4.jpg" alt="" /></div>
+            <div class="card"><img src="5.jpg" alt="" /></div>
+            <div class="card"><img src="6.jpg" alt="" /></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Details Section -->
+    <section id="details" class="section details-section">
+      <div class="container">
+        <h2 class="section-title">Szczegóły ślubu</h2>
+        <div class="details-grid">
+          <div class="detail-card">
+            <h3 id="Ceremonia">Ceremonia</h3>
+            <p>19:00</p>
+            <p>El Camborio, Granada</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Venue Section with Map -->
+    <iframe
+      src="https://www.google.com/maps?q=El+Camborio+Granada&output=embed"
+      width="100%"
+      height="400"
+      style="border: 0"
+      loading="lazy"
+    ></iframe>
+
+    <section class="section about-section">
+      <div class="container">
+        <h2 class="section-title">Informacje</h2>
+        <div class="story-content">
+          <p>
+            El Camborio znajduje się w sercu dzielnicy Albaicín i nie posiada
+            parkingu. Zalecamy przyjazd taksówką.
+          </p>
+          <p>
+            <a
+              target="_blank"
+              class="taxi-link"
+              href="https://www.pidetaxigranada.es/usuario/como-conseguir-un-taxi"
+              >Taxi web
+              <img class="icon" src="web.png" alt="web" />
+            </a>
+          </p>
+          <p>
+            <a
+              class="taxi-link"
+              target="_blank"
+              href="https://apps.apple.com/es/app/pidetaxi-pedir-taxi-en-espa%C3%B1a/id737441460"
+            >
+              iOS
+              <img class="icon" src="ios.png" alt="ios" />
+            </a>
+          </p>
+          <p>
+            <a
+              target="_blank"
+              class="taxi-link"
+              href="https://play.google.com/store/apps/details?id=es.sooft.pidetaxi&hl=es"
+            >
+              Android
+              <img class="icon" src="android.png" alt="android" />
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="Alojamiento" class="section about-section">
+      <div class="container">
+        <h2 class="section-title">Noclegi</h2>
+        <div class="story-content">
+          <p>
+            Polecamy następujące miejsca noclegowe w pobliżu miejsca ceremonii:
+          </p>
+          <ul>
+            <li>
+              <a
+                target="_blank"
+                href="https://www.booking.com/hotel/es/casa-de-la-nieve.es.html"
+              >
+                Casa de la Nieve
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://www.booking.com/hotel/es/casa-albayzin-granada.es.html"
+              >
+                Casa Albayzín Granada
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://www.booking.com/hotel/es/casa-morisca-la-alhambra.es.html"
+              >
+                Casa Morisca La Alhambra
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="section rsvp-section">
+      <div class="container">
+        <h2 class="section-title">RSVP</h2>
+        <p class="rsvp-subtitle">Potwierdź swoją obecność</p>
+        <embed
+          class="form"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdD0rHJvKo6muUCBumO1scphvL1jMxTOHGlXW3eiv6zqpeG6w/viewform"
+          type="text/html"
+        />
+        <div id="form-message" class="form-message"></div>
+      </div>
+    </section>
+
+    <section class="section about-section">
+      <div class="container">
+        <div class="story-content">
+          <p>
+            Obecność w tym wyjątkowym dniu jest dla nas najpiękniejszym
+            prezentem. <br />
+            Jeśli jednak chcielibyście zrobić nam niespodziankę: <br />
+            ES53 1465 0100 91 2062205690
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2026 Mar & Marcin – Ślub. Stworzone z ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
